@@ -111,8 +111,8 @@ if len(good_matches) > 10:
         
         out.write(f"{small_img_name} is matched with part of {original_img_name}\n\n")
         out.write("Matched part highlighted with polygon in matched_region_highlighted.png\n\n")
+        out.write('| Title: UpdateRate_Window.png) |')
         out.write('| ![Test Image](../Test_Images/UpdateRate_Window.png) |')
-        out.write("|--------|")
         out.write("| *Figure1: Test Image for comparing results* |")
         out.write('![Result Image captured](../Result_Images/matched_region_highlighted.png)\n\n')
         out.write("*Figure2: Results Image captured to compare with Test Image*\n\n")
