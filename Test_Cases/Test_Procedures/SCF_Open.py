@@ -114,7 +114,7 @@ if len(good_matches) > 10:
         out.write('| Title: UpdateRate_Window.png |\n')
         out.write('| :---------------------------- |\n')
         out.write('| ![Test Image](../Test_Images/UpdateRate_Window.png) |\n')
-        out.write("| *Figure1: Test Image for comparing results* \n")
+        out.write(" *Figure1: Test Image for comparing results* |\n")
         
         
         out.write('![Result Image captured](../Result_Images/matched_region_highlighted.png)\n\n')

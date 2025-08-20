@@ -6,7 +6,7 @@ Matched part highlighted with polygon in matched_region_highlighted.png
 | Title: UpdateRate_Window.png |
 | :---------------------------- |
 | ![Test Image](../Test_Images/UpdateRate_Window.png) |
-| *Figure1: Test Image for comparing results* 
+ *Figure1: Test Image for comparing results* |
 ![Result Image captured](../Result_Images/matched_region_highlighted.png)
 
 *Figure2: Results Image captured to compare with Test Image*
