@@ -2,4 +2,4 @@
 
 This report includes the image located at the specified path.
 
-![Matched Region Highlighted](matched_region_highlighted.png)
+[test result image](matched_region_highlighted.png)
