@@ -106,8 +106,6 @@ if len(good_matches) > 10:
     
         # Save the highlighted image
         cv2.imwrite(os.path.join(result_images_dir, 'matched_region_highlighted.png'), matched_img)
-        #print(small_img_name, "is matched with part of", original_img_name, "\n")
-        #print("Matched part highlighted with polygon in matched_region_highlighted.png\n")
         
         out.write(f'| **Title: {small_img_name}** |\n')
         out.write('| :---------------------------- |\n')
@@ -124,12 +122,8 @@ if len(good_matches) > 10:
         out.write(f"**{small_img_name}** is *matched* with part of **matched_region_highlighted.png**\n\n")
         out.write("And matched part highlighted with polygon in **matched_region_highlighted.png**\n\n")
         
-        #out.write(f"[{small_img_name}]({os.path.join(test_images_dir, 'matched_region.png')}) is matched with part of [{original_img_name}]({os.path.join(result_images_dir, 'matched_region_highlighted.png')})\n")
-    
-        # Warp the matched region to extract it
-        extracted = cv2.warpPerspective(original_img, np.linalg.inv(M), (w, h))
-        cv2.imwrite(os.path.join(result_images_dir, 'matched_region.png'), extracted)
-        print("Matched part only captured in matched_region.png\n")
+        out.write('----------------------------\n')
+        out.write('**Test Result:** *PASS*')
         
     else:
         print("Homography could not be computed.")

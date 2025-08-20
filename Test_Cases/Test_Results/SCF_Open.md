@@ -13,3 +13,5 @@
 
 And matched part highlighted with polygon in **matched_region_highlighted.png**
 
+----------------------------
+**Test Result:** *PASS*
