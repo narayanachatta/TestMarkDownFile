@@ -45,12 +45,16 @@ time.sleep(2)
 rect = main_window.rectangle()
 bbox = (rect.left, rect.top, rect.right, rect.bottom)
 
+# Create folder with file name under Result Image 
+original_img_folder = os.path.join (result_images_dir, file_name.split('.')[0])
+os.makedirs(original_img_folder, exist_ok=True)
+
 # Capture screenshot using PIL
 img1 = ImageGrab.grab(bbox)
-img1.save(os.path.join(result_images_dir, "SCFlight_With_UpdateRate_Window.png"))
+img1.save(os.path.join(original_img_folder, "SCFlight_With_UpdateRate_Window.png"))
 
 # Extract file path of original and small images
-original_img_path = os.path.join(result_images_dir, "SCFlight_With_UpdateRate_Window.png")
+original_img_path = os.path.join(original_img_folder, "SCFlight_With_UpdateRate_Window.png")
 small_img_path  = os.path.join(test_images_dir, "UpdateRate_Window.png")
 
 # Load the original and small images
@@ -126,10 +130,14 @@ if len(good_matches) > 10:
         out.write('**Test Result:** *PASS*')
         
     else:
-        print("Homography could not be computed.")
+        out.write("Homography could not be computed.")
+        out.write('----------------------------\n')
+        out.write('**Test Result:** *FAIL*')
 
 else:
-    print("Not enough matches found - {}/10".format(len(good_matches)))
+    out.write("Not enough matches found - {}/10".format(len(good_matches)))
+    out.write('----------------------------\n')
+    out.write('**Test Result:** *FAIL*')
 
 # Close the SC Flight
 app.kill()
