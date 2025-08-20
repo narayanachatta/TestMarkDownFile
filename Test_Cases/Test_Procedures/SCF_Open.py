@@ -109,13 +109,13 @@ if len(good_matches) > 10:
         #print(small_img_name, "is matched with part of", original_img_name, "\n")
         #print("Matched part highlighted with polygon in matched_region_highlighted.png\n")
         
-        out.write(f'| ## Title: {small_img_name} |\n')
+        out.write(f'##| Title: {small_img_name} |\n')
         out.write('| :---------------------------- |\n')
         out.write('| ![Test Image](../Test_Images/UpdateRate_Window.png) |\n')
         out.write("| *Figure1: Test Image for comparing results* |\n")
         out.write('----------------------------\n')
         
-        out.write(f'| ## Title: matched_region_highlighted.png |\n')
+        out.write(f'##| Title: matched_region_highlighted.png |\n')
         out.write('| :---------------------------- |\n')
         out.write('| ![Result Image captured](../Result_Images/matched_region_highlighted.png) |\n')
         out.write("| *Figure2: Results Image captured to compare with Test Image* |\n")
