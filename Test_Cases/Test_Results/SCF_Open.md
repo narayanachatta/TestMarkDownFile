@@ -11,5 +11,5 @@
 ----------------------------
 **UpdateRate_Window.png** is *matched* with part of **matched_region_highlighted.png**
 
-Matched part highlighted with polygon in **matched_region_highlighted.png**
+And matched part highlighted with polygon in **matched_region_highlighted.png**
 

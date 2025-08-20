@@ -122,7 +122,7 @@ if len(good_matches) > 10:
         out.write('----------------------------\n')
         
         out.write(f"**{small_img_name}** is *matched* with part of **matched_region_highlighted.png**\n\n")
-        out.write("Matched part highlighted with polygon in **matched_region_highlighted.png**\n\n")
+        out.write("And matched part highlighted with polygon in **matched_region_highlighted.png**\n\n")
         
         #out.write(f"[{small_img_name}]({os.path.join(test_images_dir, 'matched_region.png')}) is matched with part of [{original_img_name}]({os.path.join(result_images_dir, 'matched_region_highlighted.png')})\n")
     
