@@ -114,30 +114,35 @@ if len(good_matches) > 10:
         out.write(f'| **Title: {small_img_name}** |\n')
         out.write('| :---------------------------- |\n')
         out.write('| ![Test Image](../Test_Images/UpdateRate_Window.png) |\n')
-        out.write("| *Figure1: Test Image for comparing results* |\n")
+        out.write('| *Figure1: Test Image for comparing results* |\n')
         out.write('----------------------------\n')
         
-        out.write(f'| **Title: matched_region_highlighted.png** |\n')
+        out.write(f'**{small_img_name}** is *matched* with part of **{original_img_name}** below: \n\n')
+        
+        out.write(f'| **Title: {original_img_name}** |\n')
         out.write('| :---------------------------- |\n')
-        out.write('| ![Result Image captured](../Result_Images/matched_region_highlighted.png) |\n')
-        out.write("| *Figure2: Results Image captured to compare with Test Image* |\n")
+        out.write(f'| ![Result Image captured](../Result_Images/{original_img_name}) |\n')
+        out.write('| *Figure2: Results Image captured to check Test Image* |\n')
         out.write('----------------------------\n')
         
-        out.write(f"**{small_img_name}** is *matched* with part of **matched_region_highlighted.png**\n\n")
-        out.write("And matched part highlighted with polygon in **matched_region_highlighted.png**\n\n")
+        out.write(f'Matched part identical to **{small_img_name}** *highlighted* with polygon in **matched_region_highlighted.png** below: \n\n')
         
+        out.write('| **Title: matched_region_highlighted.png** |\n')
+        out.write('| :---------------------------- |\n')
+        out.write('| ![Captured Image against Test Image](../Result_Images/matched_region_highlighted.png) |\n')
+        out.write('| *Figure3: Test Image is identified and marked with polygon* |\n')
         out.write('----------------------------\n')
-        out.write('**Test Result:** *PASS*')
+        out.write('**Test Result:** *PASS*\n')
         
     else:
-        out.write("Homography could not be computed.")
+        out.write('Homography could not be computed.\n')
         out.write('----------------------------\n')
-        out.write('**Test Result:** *FAIL*')
+        out.write('**Test Result:** *FAIL*\n')
 
 else:
     out.write("Not enough matches found - {}/10".format(len(good_matches)))
-    out.write('----------------------------\n')
-    out.write('**Test Result:** *FAIL*')
+    out.write('\n----------------------------\n')
+    out.write('**Test Result:** *FAIL*\n')
 
 # Close the SC Flight
 app.kill()
