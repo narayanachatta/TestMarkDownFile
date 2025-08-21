@@ -5,6 +5,7 @@ import cv2
 import numpy as np
 import time
 import os
+import sys
 
 # Get current file name with full path
 file_full_path = os.path.abspath(__file__)
@@ -166,6 +167,9 @@ for filename in file_names:
             out.write('----------------------------\n')
             out.write('**Test Result**: *PASS*\n')
             out.write('----------------------------\n')
+            
+            sys.exit()
+            app.kill()
 
         else:
             out.write('Homography could not be computed.\n')
