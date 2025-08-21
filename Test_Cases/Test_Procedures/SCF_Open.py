@@ -109,7 +109,7 @@ if len(good_matches) > 10:
         cv2.polylines(matched_img, [np.int32(dst)], True, (0, 255, 0), 3, cv2.LINE_AA)
     
         # Save the highlighted image
-        cv2.imwrite(os.path.join(result_images_dir, 'matched_region_highlighted.png'), matched_img)
+        cv2.imwrite(os.path.join(original_img_folder, 'matched_region_highlighted.png'), matched_img)
         
         out.write(f'| **Title: {small_img_name}** |\n')
         out.write('| :---------------------------- |\n')
@@ -121,7 +121,7 @@ if len(good_matches) > 10:
         
         out.write(f'| **Title: {original_img_name}** |\n')
         out.write('| :---------------------------- |\n')
-        out.write(f'| ![Result Image captured](../Result_Images/{original_img_name}) |\n')
+        out.write(f'| ![Result Image captured](../Result_Images/{file_name.split('.')[0]}/{original_img_name}) |\n')
         out.write('| *Figure2: Results Image captured to check Test Image* |\n')
         out.write('----------------------------\n')
         
@@ -129,7 +129,7 @@ if len(good_matches) > 10:
         
         out.write('| **Title: matched_region_highlighted.png** |\n')
         out.write('| :---------------------------- |\n')
-        out.write('| ![Captured Image against Test Image](../Result_Images/matched_region_highlighted.png) |\n')
+        out.write(f'| ![Captured Image against Test Image](../Result_Images/{file_name.split('.')[0]}/matched_region_highlighted.png) |\n')
         out.write('| *Figure3: Test Image is identified and marked with polygon* |\n')
         out.write('----------------------------\n')
         out.write('**Test Result:** *PASS*\n')
