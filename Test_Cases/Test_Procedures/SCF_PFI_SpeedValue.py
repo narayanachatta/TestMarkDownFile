@@ -56,7 +56,7 @@ img1.save(os.path.join(original_img_folder, "SCFlight_Window.png"))
 
 # Extract file path of original and small images
 original_img_path = os.path.join(original_img_folder, "SCFlight_Window.png")
-small_img_path  = os.path.join(test_images_dir, "SpeedTape_PFI.png")
+small_img_path  = os.path.join(test_images_dir, "Value_SpeedTape_PFI.png")
 
 # Load the original and small images
 original_img = cv2.imread(original_img_path)
