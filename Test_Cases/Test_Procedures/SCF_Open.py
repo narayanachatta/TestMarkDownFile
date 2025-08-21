@@ -134,11 +134,6 @@ if len(good_matches) > 10:
         out.write(f'| ![Captured Image against Test Image](../Result_Images/{file_name.split('.')[0]}/matched_region_highlighted.png) |\n')
         out.write('| *Figure3: Test Image is identified and marked with polygon* |\n')
 
-        # Test Result
-        out.write('----------------------------\n')
-        out.write('**Test Result**: *PASS*\n')
-        out.write('----------------------------\n')
-
     else:
         out.write('Homography could not be computed.\n')
         out.write('----------------------------\n')
@@ -156,6 +151,11 @@ else:
     # Close the application and terminate execution
     app.close
     sys.exit()
+    
+# Test Result
+out.write('----------------------------\n')
+out.write('**Test Result**: *PASS*\n')
+out.write('----------------------------\n')
 
 # Close the SC Flight
 app.kill()
