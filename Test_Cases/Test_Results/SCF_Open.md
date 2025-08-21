@@ -21,3 +21,4 @@ Matched part identical to **UpdateRate_Window.png** *highlighted* with polygon i
 | *Figure3: Test Image is identified and marked with polygon* |
 ----------------------------
 **Test Result:** *PASS*
+----------------------------

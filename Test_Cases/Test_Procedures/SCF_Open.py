@@ -45,7 +45,7 @@ time.sleep(2)
 rect = main_window.rectangle()
 bbox = (rect.left, rect.top, rect.right, rect.bottom)
 
-# Create folder with file name under Result Image 
+# Create folder with file name under Result Image
 original_img_folder = os.path.join (result_images_dir, file_name.split('.')[0])
 os.makedirs(original_img_folder, exist_ok=True)
 
@@ -98,44 +98,46 @@ if len(good_matches) > 10:
     # Compute homography
     M, mask = cv2.findHomography(src_pts, dst_pts, cv2.RANSAC, 5.0)
 
-    if M is not None:    
+    if M is not None:
         # Get the bounding box from the small image
         h, w = gray_small.shape
         pts = np.float32([[0, 0], [0, h], [w, h], [w, 0]]).reshape(-1, 1, 2)
         dst = cv2.perspectiveTransform(pts, M)
-    
+
         # Draw polygon on the original image
         matched_img = original_img.copy()
         cv2.polylines(matched_img, [np.int32(dst)], True, (0, 255, 0), 3, cv2.LINE_AA)
-    
+
         # Save the highlighted image
         cv2.imwrite(os.path.join(original_img_folder, 'matched_region_highlighted.png'), matched_img)
-        
+
         out.write(f'| **Title: {small_img_name}** |\n')
         out.write('| :---------------------------- |\n')
         out.write('| ![Test Image](../Test_Images/UpdateRate_Window.png) |\n')
         out.write('| *Figure1: Test Image for comparing results* |\n')
-        
+
         out.write('----------------------------\n')
         out.write(f'**{small_img_name}** is *matched* with part of **{original_img_name}** below: \n\n')
         out.write('----------------------------\n')
-        
+
         out.write(f'| **Title: {original_img_name}** |\n')
         out.write('| :---------------------------- |\n')
         out.write(f'| ![Result Image captured](../Result_Images/{file_name.split('.')[0]}/{original_img_name}) |\n')
         out.write('| *Figure2: Results Image captured to check Test Image* |\n')
-        
+
         out.write('----------------------------\n')
         out.write(f'Matched part identical to **{small_img_name}** *highlighted* with polygon in **matched_region_highlighted.png** below: \n\n')
         out.write('----------------------------\n')
-        
+
         out.write('| **Title: matched_region_highlighted.png** |\n')
         out.write('| :---------------------------- |\n')
         out.write(f'| ![Captured Image against Test Image](../Result_Images/{file_name.split('.')[0]}/matched_region_highlighted.png) |\n')
         out.write('| *Figure3: Test Image is identified and marked with polygon* |\n')
+
         out.write('----------------------------\n')
         out.write('**Test Result:** *PASS*\n')
-        
+        out.write('----------------------------\n')
+
     else:
         out.write('Homography could not be computed.\n')
         out.write('----------------------------\n')
