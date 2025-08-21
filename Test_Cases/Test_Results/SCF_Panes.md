@@ -1,7 +1,7 @@
 # **Test Report**
 | **Title: RightPane_Map.png** |
 | :---------------------------- |
-| ![Test Image](../Test_Images/UpdateRate_Window.png) |
+| ![Test Image](../Test_Images/RightPane_Map.png) |
 | *Figure1: Test Image for comparing results* |
 ----------------------------
 **RightPane_Map.png** is *matched* with part of **SCFlight_Window.png** below: 
@@ -24,7 +24,7 @@ Matched part identical to **RightPane_Map.png** *highlighted* with polygon in **
 ----------------------------
 | **Title: LeftPane_PanelControl.png** |
 | :---------------------------- |
-| ![Test Image](../Test_Images/UpdateRate_Window.png) |
+| ![Test Image](../Test_Images/LeftPane_PanelControl.png) |
 | *Figure1: Test Image for comparing results* |
 ----------------------------
 **LeftPane_PanelControl.png** is *matched* with part of **SCFlight_Window.png** below: 
@@ -47,7 +47,7 @@ Matched part identical to **LeftPane_PanelControl.png** *highlighted* with polyg
 ----------------------------
 | **Title: LeftPane_PFI.png** |
 | :---------------------------- |
-| ![Test Image](../Test_Images/UpdateRate_Window.png) |
+| ![Test Image](../Test_Images/LeftPane_PFI.png) |
 | *Figure1: Test Image for comparing results* |
 ----------------------------
 **LeftPane_PFI.png** is *matched* with part of **SCFlight_Window.png** below: 

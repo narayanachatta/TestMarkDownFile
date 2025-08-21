@@ -142,7 +142,7 @@ for filename in file_names:
             
             out.write(f'| **Title: {small_img_name}** |\n')
             out.write('| :---------------------------- |\n')
-            out.write('| ![Test Image](../Test_Images/UpdateRate_Window.png) |\n')
+            out.write(f'| ![Test Image](../Test_Images/{small_img_name}) |\n')
             out.write('| *Figure1: Test Image for comparing results* |\n')
 
             out.write('----------------------------\n')
