@@ -144,7 +144,7 @@ for filename in file_names:
             out.write(f'| **Title: {small_img_name}** |\n')
             out.write('| :---------------------------- |\n')
             out.write(f'| ![Test Image](../Test_Images/{small_img_name}) |\n')
-            out.write(f'| *Figure{i}: Test Image for comparing results* |\n')
+            out.write('| *Figure1: Test Image for comparing results* |\n')
 
             out.write('----------------------------\n')
             out.write(f'**{small_img_name}** is *matched* with part of **{original_img_name}** below: \n\n')
@@ -153,7 +153,7 @@ for filename in file_names:
             out.write(f'| **Title: {original_img_name}** |\n')
             out.write('| :---------------------------- |\n')
             out.write(f'| ![Result Image captured](../Result_Images/{file_name.split('.')[0]}/{original_img_name}) |\n')
-            out.write(f'| *Figure{i+1}: Results Image captured to check Test Image* |\n')
+            out.write('| *Figure2: Results Image captured to check Test Image* |\n')
 
             out.write('----------------------------\n')
             out.write(f'Matched part identical to **{small_img_name}** *highlighted* with polygon in **{'matched_region_highlighted_' + name + '.png'}** below: \n\n')
@@ -162,7 +162,7 @@ for filename in file_names:
             out.write(f'| **Title: {'matched_region_highlighted_' + name + '.png'}** |\n')
             out.write('| :---------------------------- |\n')
             out.write(f'| ![Captured Image against Test Image](../Result_Images/{file_name.split('.')[0]}/{'matched_region_highlighted_' + name + '.png'}) |\n')
-            out.write(f'| *Figure{i+2}: Test Image is identified and marked with polygon* |\n')
+            out.write('| *Figure3: Test Image is identified and marked with polygon* |\n')
 
         else:
             out.write('Homography could not be computed.\n')
