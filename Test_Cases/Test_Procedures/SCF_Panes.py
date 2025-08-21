@@ -164,24 +164,28 @@ for filename in file_names:
             out.write(f'| ![Captured Image against Test Image](../Result_Images/{file_name.split('.')[0]}/{'matched_region_highlighted_' + name + '.png'}) |\n')
             out.write('| *Figure3: Test Image is identified and marked with polygon* |\n')
 
-            out.write('----------------------------\n')
-            out.write('**Test Result**: *PASS*\n')
-            out.write('----------------------------\n')
-            
-            sys.exit()
-            app.kill()
-
         else:
             out.write('Homography could not be computed.\n')
             out.write('----------------------------\n')
             out.write('**Test Result**: *FAIL*\n')
             out.write('----------------------------\n')
+            # Close the application and terminate execution
+            app.close
+            sys.exit()
 
     else:
         out.write("Not enough matches found - {}/10".format(len(good_matches)))
         out.write('\n----------------------------\n')
         out.write('**Test Result**: *FAIL*\n')
         out.write('----------------------------\n')
+        # Close the application and terminate execution
+        app.close
+        sys.exit()
+
+# Test Result        
+out.write('----------------------------\n')
+out.write('**Test Result**: *PASS*\n')
+out.write('----------------------------\n')
 
 # Close the SC Flight
 app.kill()
