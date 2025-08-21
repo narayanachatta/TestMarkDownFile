@@ -115,17 +115,19 @@ if len(good_matches) > 10:
         out.write('| :---------------------------- |\n')
         out.write('| ![Test Image](../Test_Images/UpdateRate_Window.png) |\n')
         out.write('| *Figure1: Test Image for comparing results* |\n')
-        out.write('----------------------------\n')
         
+        out.write('----------------------------\n')
         out.write(f'**{small_img_name}** is *matched* with part of **{original_img_name}** below: \n\n')
+        out.write('----------------------------\n')
         
         out.write(f'| **Title: {original_img_name}** |\n')
         out.write('| :---------------------------- |\n')
         out.write(f'| ![Result Image captured](../Result_Images/{file_name.split('.')[0]}/{original_img_name}) |\n')
         out.write('| *Figure2: Results Image captured to check Test Image* |\n')
-        out.write('----------------------------\n')
         
+        out.write('----------------------------\n')
         out.write(f'Matched part identical to **{small_img_name}** *highlighted* with polygon in **matched_region_highlighted.png** below: \n\n')
+        out.write('----------------------------\n')
         
         out.write('| **Title: matched_region_highlighted.png** |\n')
         out.write('| :---------------------------- |\n')

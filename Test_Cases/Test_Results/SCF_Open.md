@@ -6,6 +6,7 @@
 ----------------------------
 **UpdateRate_Window.png** is *matched* with part of **SCFlight_With_UpdateRate_Window.png** below: 
 
+----------------------------
 | **Title: SCFlight_With_UpdateRate_Window.png** |
 | :---------------------------- |
 | ![Result Image captured](../Result_Images/SCF_Open/SCFlight_With_UpdateRate_Window.png) |
@@ -13,6 +14,7 @@
 ----------------------------
 Matched part identical to **UpdateRate_Window.png** *highlighted* with polygon in **matched_region_highlighted.png** below: 
 
+----------------------------
 | **Title: matched_region_highlighted.png** |
 | :---------------------------- |
 | ![Captured Image against Test Image](../Result_Images/SCF_Open/matched_region_highlighted.png) |
