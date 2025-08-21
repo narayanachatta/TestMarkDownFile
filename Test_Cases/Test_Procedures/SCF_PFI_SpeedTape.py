@@ -52,11 +52,11 @@ os.makedirs(original_img_folder, exist_ok=True)
 
 # Capture screenshot using PIL
 img1 = ImageGrab.grab(bbox)
-img1.save(os.path.join(original_img_folder, "SCFlight_With_UpdateRate_Window.png"))
+img1.save(os.path.join(original_img_folder, "SCFlight_Window.png"))
 
 # Extract file path of original and small images
-original_img_path = os.path.join(original_img_folder, "SCFlight_With_UpdateRate_Window.png")
-small_img_path  = os.path.join(test_images_dir, "UpdateRate_Window.png")
+original_img_path = os.path.join(original_img_folder, "SCFlight_Window.png")
+small_img_path  = os.path.join(test_images_dir, "SpeedTape_PFI.png")
 
 # Load the original and small images
 original_img = cv2.imread(original_img_path)
@@ -99,16 +99,16 @@ if len(good_matches) > 10:
     # Compute homography
     M, mask = cv2.findHomography(src_pts, dst_pts, cv2.RANSAC, 5.0)
 
-    if M is not None:
+    if M is not None:    
         # Get the bounding box from the small image
         h, w = gray_small.shape
         pts = np.float32([[0, 0], [0, h], [w, h], [w, 0]]).reshape(-1, 1, 2)
         dst = cv2.perspectiveTransform(pts, M)
-
+    
         # Draw polygon on the original image
         matched_img = original_img.copy()
         cv2.polylines(matched_img, [np.int32(dst)], True, (0, 255, 0), 3, cv2.LINE_AA)
-
+    
         # Save the highlighted image
         cv2.imwrite(os.path.join(original_img_folder, 'matched_region_highlighted.png'), matched_img)
 
