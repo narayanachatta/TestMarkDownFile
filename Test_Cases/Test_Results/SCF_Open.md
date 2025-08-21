@@ -20,5 +20,5 @@ Matched part identical to **UpdateRate_Window.png** *highlighted* with polygon i
 | ![Captured Image against Test Image](../Result_Images/SCF_Open/matched_region_highlighted.png) |
 | *Figure3: Test Image is identified and marked with polygon* |
 ----------------------------
-**Test Result:** *PASS*
+**Test Result**: *PASS*
 ----------------------------

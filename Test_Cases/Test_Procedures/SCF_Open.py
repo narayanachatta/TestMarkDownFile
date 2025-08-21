@@ -135,18 +135,20 @@ if len(good_matches) > 10:
         out.write('| *Figure3: Test Image is identified and marked with polygon* |\n')
 
         out.write('----------------------------\n')
-        out.write('**Test Result:** *PASS*\n')
+        out.write('**Test Result**: *PASS*\n')
         out.write('----------------------------\n')
 
     else:
         out.write('Homography could not be computed.\n')
         out.write('----------------------------\n')
-        out.write('**Test Result:** *FAIL*\n')
+        out.write('**Test Result**: *FAIL*\n')
+        out.write('----------------------------\n')
 
 else:
     out.write("Not enough matches found - {}/10".format(len(good_matches)))
     out.write('\n----------------------------\n')
-    out.write('**Test Result:** *FAIL*\n')
+    out.write('**Test Result**: *FAIL*\n')
+    out.write('----------------------------\n')
 
 # Close the SC Flight
 app.kill()
