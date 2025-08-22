@@ -10,6 +10,34 @@ from Utils import move
 import os
 import sys
 
+# Get current file name with full path
+file_full_path = os.path.abspath(__file__)
+
+# Get path of current file
+test_dir = os.path.abspath(os.path.dirname(__file__))
+
+# Get path of results
+results_dir = os.path.join(test_dir, r"..\Test_Results")
+
+# Get path os test images
+test_images_dir = os.path.join(test_dir, r"..\Test_Images")
+
+# Get path os result images
+result_images_dir = os.path.join(test_dir, r"..\Result_Images")
+
+# Get just the file name
+file_name = os.path.basename(file_full_path)
+
+# Create output markdown file
+out_file = file_name.split('.')[0] + '.md'
+
+# Get result file name with full path
+full_out_file = os.path.join(results_dir, out_file)
+
+# Open out_file for test reports
+out =  open(full_out_file, "w+")
+out.write("# **Test Report**\n")
+
 # Open SC Flight application
 app = Application(backend="win32").start(r"C:\Users\Narayana.Chatta\Downloads\SC3_Local\Simulation\flight 30\flight.exe")
 main_window = app.window(title="Flight [v0.4.6-rc.3]")
@@ -93,10 +121,10 @@ os.makedirs(original_img_folder, exist_ok=True)
 
 # Capture screenshot using PIL
 img1 = ImageGrab.grab(bbox)
-img1.save(os.path.join(original_img_folder, "SCFlight_Window.png"))
+img1.save(os.path.join(original_img_folder, "SCFlight_Window_Default.png"))
 
 # Extract file path of original and small images
-original_img_path = os.path.join(original_img_folder, "SCFlight_Window.png")
+original_img_path = os.path.join(original_img_folder, "SCFlight_Window_Default.png")
 small_img_path  = os.path.join(test_images_dir, "NavMap_HomeUAV_DefaultLocation.png")
 
 # Load the original and small images
@@ -216,10 +244,10 @@ bbox = (rect.left, rect.top, rect.right, rect.bottom)
 
 # Capture screenshot using PIL
 img1 = ImageGrab.grab(bbox)
-img1.save(os.path.join(original_img_folder, "SCFlight_Window.png"))
+img1.save(os.path.join(original_img_folder, "SCFlight_Window_PinSpotForm_window.png"))
 
 # Extract file path of original and small images
-original_img_path = os.path.join(original_img_folder, "SCFlight_Window.png")
+original_img_path = os.path.join(original_img_folder, "SCFlight_Window_PinSpotForm_window.png")
 small_img_path  = os.path.join(test_images_dir, "NavMap_HotKeys_PinSpotForm_window.png")
 
 # Load the original and small images
@@ -391,10 +419,10 @@ bbox = (rect.left, rect.top, rect.right, rect.bottom)
 
 # Capture screenshot using PIL
 img1 = ImageGrab.grab(bbox)
-img1.save(os.path.join(original_img_folder, "SCFlight_Window.png"))
+img1.save(os.path.join(original_img_folder, "SCFlight_Window_PinSpotForm_1.png"))
 
 # Extract file path of original and small images
-original_img_path = os.path.join(original_img_folder, "SCFlight_Window.png")
+original_img_path = os.path.join(original_img_folder, "SCFlight_Window_PinSpotForm_1.png")
 small_img_path  = os.path.join(test_images_dir, "NavMap_HotKeys_PinSpotForm_1.png")
 
 # Load the original and small images
@@ -611,10 +639,10 @@ bbox = (rect.left, rect.top, rect.right, rect.bottom)
 
 # Capture screenshot using PIL
 img1 = ImageGrab.grab(bbox)
-img1.save(os.path.join(original_img_folder, "SCFlight_Window.png"))
+img1.save(os.path.join(original_img_folder, "SCFlight_Window_PinSpotForm_2.png"))
 
 # Extract file path of original and small images
-original_img_path = os.path.join(original_img_folder, "SCFlight_Window.png")
+original_img_path = os.path.join(original_img_folder, "SCFlight_Window_PinSpotForm_2.png")
 small_img_path  = os.path.join(test_images_dir, "NavMap_HotKeys_PinSpotForm_2.png")
 
 # Load the original and small images
