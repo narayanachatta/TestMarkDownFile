@@ -121,10 +121,10 @@ os.makedirs(original_img_folder, exist_ok=True)
 
 # Capture screenshot using PIL
 img1 = ImageGrab.grab(bbox)
-img1.save(os.path.join(original_img_folder, "SCFlight_Window.png"))
+img1.save(os.path.join(original_img_folder, "SCFlight_Window_Default.png"))
 
 # Extract file path of original and small images
-original_img_path = os.path.join(original_img_folder, "SCFlight_Window.png")
+original_img_path = os.path.join(original_img_folder, "SCFlight_Window_Default.png")
 small_img_path  = os.path.join(test_images_dir, "NavMap_HomeUAV_DefaultLocation.png")
 
 # Load the original and small images
@@ -290,10 +290,10 @@ bbox = (rect.left, rect.top, rect.right, rect.bottom)
 
 # Capture screenshot using PIL
 img1 = ImageGrab.grab(bbox)
-img1.save(os.path.join(original_img_folder, "SCFlight_Window.png"))
+img1.save(os.path.join(original_img_folder, "SCFlight_Window_DrawCircle_1.png"))
 
 # Extract file path of original and small images
-original_img_path = os.path.join(original_img_folder, "SCFlight_Window.png")
+original_img_path = os.path.join(original_img_folder, "SCFlight_Window_DrawCircle_1.png")
 small_img_path  = os.path.join(test_images_dir, "NavMap_HotKeys_DrawCircle_1.png")
 
 # Load the original and small images
@@ -490,10 +490,10 @@ bbox = (rect.left, rect.top, rect.right, rect.bottom)
 
 # Capture screenshot using PIL
 img1 = ImageGrab.grab(bbox)
-img1.save(os.path.join(original_img_folder, "SCFlight_Window.png"))
+img1.save(os.path.join(original_img_folder, "SCFlight_Window_DrawCircle_2.png"))
 
 # Extract file path of original and small images
-original_img_path = os.path.join(original_img_folder, "SCFlight_Window.png")
+original_img_path = os.path.join(original_img_folder, "SCFlight_Window_DrawCircle_2.png")
 small_img_path  = os.path.join(test_images_dir, "NavMap_HotKeys_DrawCircle_2.png")
 
 # Load the original and small images
