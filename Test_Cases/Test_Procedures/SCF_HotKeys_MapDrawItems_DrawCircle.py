@@ -7,6 +7,36 @@ import pyautogui
 import time
 import keyboard
 from Utils import move
+import os
+import sys
+
+# Get current file name with full path
+file_full_path = os.path.abspath(__file__)
+
+# Get path of current file
+test_dir = os.path.abspath(os.path.dirname(__file__))
+
+# Get path of results
+results_dir = os.path.join(test_dir, r"..\Test_Results")
+
+# Get path os test images
+test_images_dir = os.path.join(test_dir, r"..\Test_Images")
+
+# Get path os result images
+result_images_dir = os.path.join(test_dir, r"..\Result_Images")
+
+# Get just the file name
+file_name = os.path.basename(file_full_path)
+
+# Create output markdown file
+out_file = file_name.split('.')[0] + '.md'
+
+# Get result file name with full path
+full_out_file = os.path.join(results_dir, out_file)
+
+# Open out_file for test reports
+out =  open(full_out_file, "w+")
+out.write("# **Test Report**\n")
 
 # Open SC Flight application
 app = Application(backend="win32").start(r"C:\Users\Narayana.Chatta\Downloads\SC3_Local\Simulation\flight 30\flight.exe")

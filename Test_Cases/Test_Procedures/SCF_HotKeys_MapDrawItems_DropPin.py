@@ -7,6 +7,8 @@ import pyautogui
 import time
 import keyboard
 from Utils import move
+import os
+import sys
 
 # Open SC Flight application
 app = Application(backend="win32").start(r"C:\Users\Narayana.Chatta\Downloads\SC3_Local\Simulation\flight 30\flight.exe")
